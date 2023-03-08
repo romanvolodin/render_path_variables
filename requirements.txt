@@ -1,4 +1,5 @@
 black==23.1.*
+fake-bpy-module-2.83==20230117
 flake8==6.0.*
 isort==5.12.*
 sort-requirements==1.3.*
