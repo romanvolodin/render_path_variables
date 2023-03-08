@@ -1,7 +1,13 @@
 import bpy
 
 from .handlers import format_render_output_path, revert_render_output_path
-from .preferences import CUSTOM_VARIABLES_UL_name_value, CUSTOM_VARIABLES_OT_actions, Preferences, CustomVariablesPropertiesGroup
+from .preferences import (
+    CUSTOM_VARIABLES_OT_actions,
+    CUSTOM_VARIABLES_UL_name_value,
+    CustomVariablesPropertiesGroup,
+    Preferences,
+)
+
 
 bl_info = {
     "name": "Render Path Variables",

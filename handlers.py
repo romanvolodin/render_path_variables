@@ -1,7 +1,6 @@
 from os.path import basename, splitext
 
 import bpy
-
 from bpy.app.handlers import persistent
 
 
