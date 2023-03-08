@@ -1,0 +1,4 @@
+black==23.1.*
+flake8==6.0.*
+isort==5.12.*
+sort-requirements==1.3.*
