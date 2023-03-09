@@ -1,6 +1,7 @@
 import bpy
 
 from .handlers import format_render_output_path, revert_render_output_path
+from .path_preview import RenderPathPreviewPanel
 from .preferences import (
     CUSTOM_VARIABLES_OT_actions,
     CUSTOM_VARIABLES_UL_name_value,
@@ -22,6 +23,7 @@ classes = (
     CustomVariablePropertiesGroup,
     CUSTOM_VARIABLES_OT_actions,
     Preferences,
+    RenderPathPreviewPanel,
 )
 
 
