@@ -40,7 +40,7 @@ class CUSTOM_VARIABLES_OT_actions(bpy.types.Operator):
     )
 
     def invoke(self, context, event):
-        preferences = context.preferences.addons[__name__].preferences
+        preferences = context.preferences.addons[__package__].preferences
         active_data_field_index = preferences.active_data_field_index
 
         if self.action == "ADD":
@@ -69,7 +69,7 @@ class CUSTOM_VARIABLES_OT_actions(bpy.types.Operator):
 
 
 class Preferences(bpy.types.AddonPreferences):
-    bl_idname = __name__
+    bl_idname = __package__
 
     data_fields: bpy.props.CollectionProperty(
         type=CustomVariablesPropertiesGroup,
