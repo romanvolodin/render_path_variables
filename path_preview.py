@@ -28,6 +28,11 @@ class RenderPathPreviewPanel(bpy.types.Panel):
     bl_region_type = "WINDOW"
     bl_context = "output"
 
+    @classmethod
+    def poll(cls, context):
+        preferences = context.preferences.addons[__package__].preferences
+        return preferences.is_preview_path_panel_displayed
+
     def draw(self, context):
         layout = self.layout
         layout.label(text="Absolute render path:")

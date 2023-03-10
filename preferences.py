@@ -69,6 +69,12 @@ class CUSTOM_VARIABLES_OT_actions(bpy.types.Operator):
 class Preferences(bpy.types.AddonPreferences):
     bl_idname = __package__
 
+    is_path_preview_panel_displayed: bpy.props.BoolProperty(
+        name="Display Path Preview panel",
+        default=True,
+        description="Display/hide Path Preview panel in the render output properties",
+    )
+
     custom_variables: bpy.props.CollectionProperty(
         type=CustomVariablePropertiesGroup,
         name="Custom variables",
@@ -84,6 +90,9 @@ class Preferences(bpy.types.AddonPreferences):
 
     def draw(self, context):
         layout = self.layout
+        row = layout.row()
+        row.prop(self, "is_path_preview_panel_displayed")
+
         row = layout.row()
         row.label(text="name")
         row.label(text="value")
