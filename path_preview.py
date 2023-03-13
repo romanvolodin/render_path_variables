@@ -31,7 +31,7 @@ class RenderPathPreviewPanel(bpy.types.Panel):
     @classmethod
     def poll(cls, context):
         preferences = context.preferences.addons[__package__].preferences
-        return preferences.is_preview_path_panel_displayed
+        return preferences.is_path_preview_panel_displayed
 
     def draw(self, context):
         layout = self.layout
